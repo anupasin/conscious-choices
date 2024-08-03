@@ -16,7 +16,7 @@ const OrderConfirmationPage: React.FC = () => {
         <p className="font-bold">Thank you for your order!</p>
         <p>Your order number is: #{orderNumber}</p>
       </div>
-      <p className="mb-4">We've received your order and will process it as soon as possible. You will receive an email confirmation shortly.</p>
+      <p className="mb-4">We&apos;ve received your order and will process it as soon as possible. You will receive an email confirmation shortly.</p>
       <Link href="/" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
         Continue Shopping
       </Link>
