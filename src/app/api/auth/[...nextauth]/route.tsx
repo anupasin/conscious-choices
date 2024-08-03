@@ -1,9 +1,10 @@
+// src/app/api/auth/[...nextauth]/route.ts
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { findUserByEmail, validatePassword } from "@/lib/users";
-import { SessionStrategy } from "next-auth";
+import type { NextAuthOptions } from "next-auth";
 
-const authOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -33,7 +34,7 @@ const authOptions = {
     })
   ],
   session: {
-    strategy: "jwt" as SessionStrategy,
+    strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
@@ -41,4 +42,6 @@ const authOptions = {
   },
 };
 
-export const handler = NextAuth(authOptions);
+const handler = NextAuth(authOptions);
+
+export { handler as GET, handler as POST };
