@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { findUserByEmail, validatePassword } from "@/lib/users";
+import { SessionStrategy } from "next-auth"; // Add this import
 
 const authOptions = {
   providers: [
@@ -32,7 +33,7 @@ const authOptions = {
     })
   ],
   session: {
-    strategy: "jwt" as const,
+    strategy: "jwt" as SessionStrategy, // Cast to SessionStrategy
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
@@ -40,4 +41,6 @@ const authOptions = {
   },
 };
 
-export default NextAuth(authOptions);
+export const handler = NextAuth(authOptions);
+
+export { handler as GET, handler as POST };
