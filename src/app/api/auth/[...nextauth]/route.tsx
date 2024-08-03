@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { findUserByEmail, validatePassword } from "@/lib/users";
 import type { NextAuthOptions } from "next-auth";
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
