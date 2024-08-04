@@ -65,7 +65,7 @@ export default function Login() {
         </form>
         <div className="mt-4 text-center">
           <Link href="/register" className="text-green-600 hover:text-green-800">
-            Don't have an account? Sign up
+            Don&apos;t have an account? Sign up
           </Link>
         </div>
       </div>
