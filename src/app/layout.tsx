@@ -1,5 +1,3 @@
-// src/app/layout.tsx
-
 'use client';
 
 import '@/app/globals.css'
@@ -7,10 +5,8 @@ import Link from 'next/link'
 import { CartProvider } from '../context/CartContext'
 import CartIcon from '@/components/CartIcon'
 import { Providers } from "../components/Providers"
-import AuthButton from '../components/AuthButton'
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-
 
 export default function RootLayout({
   children,
@@ -39,9 +35,8 @@ export default function RootLayout({
                       <Link href="/products" className="hover:bg-green-700 px-3 py-2 rounded-md">Products</Link>
                       <Link href="/blog" className="hover:bg-green-700 px-3 py-2 rounded-md">Blog</Link>
                       <Link href="/about" className="hover:bg-green-700 px-3 py-2 rounded-md">About</Link>
-                      <Link href="/login" className="hover:bg-green-700 px-3 py-2 rounded-md">Login</Link>
+                      <Link href="/login" className="hover:bg-green-700 px-3 py-2 rounded-md">Sign In</Link>
                       <Link href="/register" className="hover:bg-green-700 px-3 py-2 rounded-md">Register</Link>
-                      <AuthButton />
                       <CartIcon />
                     </div>
                   </div>
@@ -57,9 +52,8 @@ export default function RootLayout({
                       <Link href="/products" className="hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">Products</Link>
                       <Link href="/blog" className="hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">Blog</Link>
                       <Link href="/about" className="hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">About</Link>
-                      <Link href="/login" className="hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">Login</Link>
+                      <Link href="/login" className="hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">Sign In</Link>
                       <Link href="/register" className="hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">Register</Link>
-                      <AuthButton />
                       <CartIcon />
                     </div>
                   </div>

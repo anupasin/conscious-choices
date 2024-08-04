@@ -4,6 +4,7 @@
 import { dummyProducts } from '@/lib/dummyData';
 import { useCart } from '../../../context/CartContext';
 import { notFound } from 'next/navigation';
+import Image from 'next/image'; // Importing the Image component
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const { addToCart } = useCart();
@@ -32,9 +33,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <img
+          <Image
             src={product.imageUrl}
             alt={product.name}
+            width={800} // Providing width
+            height={600} // Providing height
             className="w-full h-auto md:h-[600px] object-cover"
           />
         </div>
